@@ -1,0 +1,13 @@
+.videogamelist__div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.videogamelist__h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'little-boy';
+    font-size: 3em;
+}

@@ -1,0 +1,13 @@
+.platformsMenu__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #80C0FF;
+    padding: 0%;
+}
+
+.platformsMenu__h1 {
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}

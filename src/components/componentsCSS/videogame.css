@@ -1,0 +1,39 @@
+.videogame__div {
+    width: 25%;
+    border: 15px solid #808080;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: 50px 0px;
+}
+
+.videogame__element {
+    margin: 0px;
+    padding: 10px;
+    font-family: 'little-boy';
+    font-size: 2em;
+}
+
+.videogame__img {
+    border-radius: 20px;
+    background-color: #808080;
+    width: 50%;
+}
+
+.videogame__h1 {
+    margin: 0px;
+    padding: 10px;
+    font-family: 'little-boy';
+    font-size: 3em;
+}
+
+.videogame__h2 {
+    margin: 0px;
+    padding: 10px;
+    font-family: 'little-boy';
+    font-size: 2.3em;
+}

@@ -1,0 +1,160 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Lucha"
+    },
+    {
+      "id": 2,
+      "name": "Arcade"
+    },
+    {
+      "id": 3,
+      "name": "Plataformas"
+    },
+    {
+      "id": 4,
+      "name": "Shooter"
+    },
+    {
+      "id": 5,
+      "name": "Estrategia"
+    },
+    {
+      "id": 6,
+      "name": "Simulación"
+    },
+    {
+      "id": 7,
+      "name": "Deporte"
+    },
+    {
+      "id": 8,
+      "name": "Aventura"
+    },
+    {
+      "id": 9,
+      "name": "Rol"
+    },
+    {
+      "id": 10,
+      "name": "Educación"
+    },
+    {
+      "id": 11,
+      "name": "Puzzle"
+    }
+  ],
+  "platforms": [
+    {
+      "id": 1,
+      "name": "PC"
+    },
+    {
+      "id": 2,
+      "name": "PS5"
+    },
+    {
+      "id": 3,
+      "name": "Xbox One"
+    },
+    {
+      "id": 4,
+      "name": "Switch"
+    },
+    {
+      "id": 5,
+      "name": "Android"
+    },
+    {
+      "id": 6,
+      "name": "iOS"
+    },
+    {
+      "id": 7,
+      "name": "Otras"
+    }
+  ],
+  "videogames": [
+    {
+      "id": 1,
+      "name": "Hüggen Ball",
+      "description": "Juego de arrastrar una bola por todo el sistema solar mientras te persiguen enemigos.",
+      "release_date": "07/4/1997",
+      "company": "Jill Games company",
+      "platforms": [
+        1, 7
+      ],
+      "categories": [
+        4, 5, 8
+      ],
+      "price": 19.99,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
+      "video_url": "https://www.youtube.com/watch?v=TizoNhkppPE&pp=ugMICgJlcxABGAHKBQtjb2xvbnkgd2Fycw%3D%3D"
+    },
+    {
+      "id": 2,
+      "name": "Super Java Boy",
+      "description": "Juego de completar pequeños ejercicios de programación en Java.",
+      "release_date": "24/10/2016",
+      "company": "EducaGames",
+      "platforms": [
+        1
+      ],
+      "categories": [
+        10
+      ],
+      "price": 4.99,
+      "img_url": "https://leetcode.com/static/images/LeetCode_logo_rvs.png",
+      "video_url": "https://www.youtube.com/watch?v=Yyyi12oaK94&pp=ygUNbGVldGNvZGUgamF2YQ%3D%3D"
+    },
+    {
+      "id": 3,
+      "name": "Hüggen Ball",
+      "description": "Juego de arrastrar una bola por todo el sistema solar mientras te persiguen enemigos.",
+      "release_date": "07/4/1997",
+      "company": "Jill Games company",
+      "platforms": [
+        1, 7
+      ],
+      "categories": [
+        4, 5, 8
+      ],
+      "price": 19.99,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
+      "video_url": "https://www.youtube.com/watch?v=TizoNhkppPE&pp=ugMICgJlcxABGAHKBQtjb2xvbnkgd2Fycw%3D%3D"
+    },
+    {
+      "id": 4,
+      "name": "Hüggen Ball",
+      "description": "Juego de arrastrar una bola por todo el sistema solar mientras te persiguen enemigos.",
+      "release_date": "07/4/1997",
+      "company": "Jill Games company",
+      "platforms": [
+        1, 7
+      ],
+      "categories": [
+        4, 5, 8
+      ],
+      "price": 19.99,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
+      "video_url": "https://www.youtube.com/watch?v=TizoNhkppPE&pp=ugMICgJlcxABGAHKBQtjb2xvbnkgd2Fycw%3D%3D"
+    },
+    {
+      "id": 5,
+      "name": "Super Java Boy",
+      "description": "Juego de completar pequeños ejercicios de programación en Java.",
+      "release_date": "24/10/2016",
+      "company": "EducaGames",
+      "platforms": [
+        1
+      ],
+      "categories": [
+        10
+      ],
+      "price": 4.99,
+      "img_url": "https://leetcode.com/static/images/LeetCode_logo_rvs.png",
+      "video_url": "https://www.youtube.com/watch?v=Yyyi12oaK94&pp=ygUNbGVldGNvZGUgamF2YQ%3D%3D"
+    }
+  ]
+}
