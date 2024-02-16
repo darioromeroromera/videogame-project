@@ -3,6 +3,7 @@ import VideoGameList from './components/VideoGameList';
 import CategoriesMenu from "./components/CategoriesMenu";
 import Header from "./components/Header";
 import PlatformsMenu from "./components/PlatformsMenu";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [videogames, setVideogames] = useState([]);
@@ -16,10 +17,12 @@ function App() {
     const [checkedPlatforms, setCheckedPlatforms] = useState([]);
 
     useEffect(() => {
-      const filteredList = videogames.filter(videogame => checkIfFilteredGame(videogame));
+      const categoryFilteredList = videogames.filter(videogame => checkIfFilteredGameByCat(videogame));
 
-      setFilteredVideogames(filteredList);
-    }, [checkedCategories, videogames]);
+      const fullyFilteredList = categoryFilteredList.filter(videogame => checkIfFilteredGameByPlat(videogame));
+
+      setFilteredVideogames(fullyFilteredList);
+    }, [checkedCategories, checkedPlatforms,videogames]);
 
     useEffect(() => {
       const checkeds = categories.map(cat => {return {id: cat.id, checked: true}});
@@ -31,12 +34,23 @@ function App() {
       setCheckedPlatforms(checkeds);
     }, [platforms]);
 
-    const checkIfFilteredGame = videogame => {
+    const checkIfFilteredGameByCat = videogame => {
 
       for (const category of videogame.categories) {
         const cat = checkedCategories.find(cat => cat.id == category);
 
         if (cat.checked)
+          return true;
+      }
+      return false;
+    }
+
+    const checkIfFilteredGameByPlat = videogame => {
+
+      for (const platform of videogame.platforms) {
+        const plat = checkedPlatforms.find(plat => plat.id == platform);
+
+        if (plat.checked)
           return true;
       }
       return false;
@@ -71,6 +85,7 @@ function App() {
       <Header title="Videogame List"/>
       <CategoriesMenu categories={categories} checkedCategories={checkedCategories} setCheckedCategories={setCheckedCategories}/>
       <PlatformsMenu platforms={platforms} checkedPlatforms={checkedPlatforms} setCheckedPlatforms={setCheckedPlatforms}/>
+      <SearchBar/>
       <VideoGameList categories={categories} platforms={platforms} filteredVideogames={filteredVideogames}/>
     </div>
   );

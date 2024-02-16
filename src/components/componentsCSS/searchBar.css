@@ -1,0 +1,25 @@
+.searchBar__h1 {
+    text-align: center;
+    font-family: 'little-boy';
+    font-size: 4em;
+    width: 100%;
+}
+
+.searchBar__input {
+    border-radius: 5px;
+    width: 30%;
+}
+
+.searchBar__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar__btn {
+    padding: 1%;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: aqua;
+}

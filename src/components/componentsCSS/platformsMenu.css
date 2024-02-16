@@ -3,11 +3,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #80C0FF;
-    padding: 0%;
+    padding-bottom: 3%;
 }
 
 .platformsMenu__h1 {
     width: 100%;
     text-align: center;
     color: #FFF;
+    font-family: 'little-boy';
+    font-size: 3em;
 }
