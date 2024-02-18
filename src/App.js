@@ -4,6 +4,7 @@ import CategoriesMenu from "./components/CategoriesMenu";
 import Header from "./components/Header";
 import PlatformsMenu from "./components/PlatformsMenu";
 import SearchBar from "./components/SearchBar";
+import Modal from "./components/Modal";
 
 function App() {
   const [videogames, setVideogames] = useState([]);
@@ -16,22 +17,44 @@ function App() {
     const [checkedCategories, setCheckedCategories] = useState([]);
     const [checkedPlatforms, setCheckedPlatforms] = useState([]);
 
+    const [searchText, setSearchText] = useState("");
+
+    const [details, setDetails] = useState({visibility: false});
+
     useEffect(() => {
-      const categoryFilteredList = videogames.filter(videogame => checkIfFilteredGameByCat(videogame));
+      console.log(details);
+    }, [details]);
 
-      const fullyFilteredList = categoryFilteredList.filter(videogame => checkIfFilteredGameByPlat(videogame));
+    const filterGames = () =>{
+      if (videogames && checkedCategories && checkedPlatforms) {
+        const categoryFilteredList = videogames.filter(videogame => checkIfFilteredGameByCat(videogame));
 
-      setFilteredVideogames(fullyFilteredList);
+        const categoryAndPlatformFilteredList = categoryFilteredList.filter(videogame => checkIfFilteredGameByPlat(videogame));
+
+        const fullyFilteredList = categoryAndPlatformFilteredList.filter(videogame => checkIfFilteredGameByName(videogame));
+  
+        setFilteredVideogames(fullyFilteredList);
+      }
+    }
+
+    useEffect(() => {
+      filterGames();
+      
     }, [checkedCategories, checkedPlatforms,videogames]);
 
     useEffect(() => {
-      const checkeds = categories.map(cat => {return {id: cat.id, checked: true}});
-      setCheckedCategories(checkeds);
+      if (categories) {
+        const checkeds = categories.map(cat => {return {id: cat.id, checked: true}});
+        setCheckedCategories(checkeds);
+      }
+
     }, [categories]);
 
     useEffect(() => {
-      const checkeds = platforms.map(platform => { return {id: platform.id, checked: true}});
-      setCheckedPlatforms(checkeds);
+      if (platforms) {
+        const checkeds = platforms.map(platform => { return {id: platform.id, checked: true}});
+        setCheckedPlatforms(checkeds);
+      }
     }, [platforms]);
 
     const checkIfFilteredGameByCat = videogame => {
@@ -39,7 +62,7 @@ function App() {
       for (const category of videogame.categories) {
         const cat = checkedCategories.find(cat => cat.id == category);
 
-        if (cat.checked)
+        if (cat && cat.checked)
           return true;
       }
       return false;
@@ -50,9 +73,16 @@ function App() {
       for (const platform of videogame.platforms) {
         const plat = checkedPlatforms.find(plat => plat.id == platform);
 
-        if (plat.checked)
+        if (plat && plat.checked)
           return true;
       }
+      return false;
+    }
+
+    const checkIfFilteredGameByName = videogame => {
+      if (videogame.name.toLowerCase().includes(searchText.toLowerCase()) || videogame.description.toLowerCase().includes(searchText.toLowerCase()))
+        return true;
+      
       return false;
     }
 
@@ -71,7 +101,11 @@ function App() {
     useEffect(() => {
         getCategories();
         getPlatforms();
-        getVideoGames();
+
+    }, []);
+
+    useEffect(() => {
+      getVideoGames();
     }, []);
 
     const getVideoGames = async () => {
@@ -85,8 +119,9 @@ function App() {
       <Header title="Videogame List"/>
       <CategoriesMenu categories={categories} checkedCategories={checkedCategories} setCheckedCategories={setCheckedCategories}/>
       <PlatformsMenu platforms={platforms} checkedPlatforms={checkedPlatforms} setCheckedPlatforms={setCheckedPlatforms}/>
-      <SearchBar/>
-      <VideoGameList categories={categories} platforms={platforms} filteredVideogames={filteredVideogames}/>
+      <SearchBar searchText={searchText} setSearchText={setSearchText} filterGames={filterGames}/>
+      <VideoGameList getVideoGames={getVideoGames} details={details} setDetails={setDetails} categories={categories} platforms={platforms} filteredVideogames={filteredVideogames}/>
+      <Modal details={details} setDetails={setDetails} categories={categories} platforms={platforms}/>
     </div>
   );
 }

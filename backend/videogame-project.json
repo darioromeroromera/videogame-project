@@ -83,10 +83,13 @@
       "release_date": "07/4/1997",
       "company": "Jill Games company",
       "platforms": [
-        1, 7
+        1,
+        7
       ],
       "categories": [
-        4, 5, 8
+        4,
+        5,
+        8
       ],
       "price": 19.99,
       "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
@@ -115,10 +118,13 @@
       "release_date": "07/4/1997",
       "company": "Jill Games company",
       "platforms": [
-        1, 7
+        1,
+        7
       ],
       "categories": [
-        4, 5, 8
+        4,
+        5,
+        8
       ],
       "price": 19.99,
       "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
@@ -131,10 +137,13 @@
       "release_date": "07/4/1997",
       "company": "Jill Games company",
       "platforms": [
-        1, 7
+        1,
+        7
       ],
       "categories": [
-        4, 5, 8
+        4,
+        5,
+        8
       ],
       "price": 19.99,
       "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
@@ -155,6 +164,25 @@
       "price": 4.99,
       "img_url": "https://leetcode.com/static/images/LeetCode_logo_rvs.png",
       "video_url": "https://www.youtube.com/watch?v=Yyyi12oaK94&pp=ygUNbGVldGNvZGUgamF2YQ%3D%3D"
+    },
+    {
+      "id": 6,
+      "name": "Hüggen Ball",
+      "description": "Juego de arrastrar una bola por todo el sistema solar mientras te persiguen enemigos.",
+      "release_date": "07/4/1997",
+      "company": "Jill Games company",
+      "platforms": [
+        1,
+        7
+      ],
+      "categories": [
+        4,
+        5,
+        8
+      ],
+      "price": 19.99,
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/82/Colony_Wars_Coverart.png",
+      "video_url": "https://www.youtube.com/watch?v=TizoNhkppPE&pp=ugMICgJlcxABGAHKBQtjb2xvbnkgd2Fycw%3D%3D"
     }
   ]
 }
