@@ -45,7 +45,8 @@ const VideoGame = ({videogame, categories, platforms, details, setDetails, getVi
             if (e.target.className !== 'videogame__btn')
                 if (!details.visibility)
                     setDetails({visibility: true, name: videogame.name, categories: videogame.categories,
-                        platforms: videogame.platforms, price: videogame.price, description: videogame.description, img: videogame.img_url});
+                        platforms: videogame.platforms, price: videogame.price, description: videogame.description, 
+                        img: videogame.img_url, company: videogame.company, release_date: videogame.release_date});
         }}>
             <img className='videogame__element videogame__img' src={videogame.img_url}/>
             <p className='videogame__h1'>{videogame.name}</p>

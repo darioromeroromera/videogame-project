@@ -24,6 +24,10 @@ const Modal = ({details, setDetails, categories, platforms}) => {
             <div className='modal__content_div'>
                 <div className='modal__written'>
                     <p className='videogame__h1'>{details.name}</p>
+                    <h2 className='videogame__h2'>Compañía</h2>
+                    <p className='videogame__element'>{details.company}</p>
+                    <h2 className='videogame__h2'>Fecha de lanzamiento</h2>
+                    <p className='videogame__element'>{details.release_date}</p>
                     <h2 className='videogame__h2'>Categorías</h2>
                     <p className='videogame__element'>{showCategories()}</p>
                     <h2 className='videogame__h2'>Plataformas</h2>

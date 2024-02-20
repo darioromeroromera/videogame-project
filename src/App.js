@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import PlatformsMenu from "./components/PlatformsMenu";
 import SearchBar from "./components/SearchBar";
 import Modal from "./components/Modal";
+import NewGameForm from "./components/NewGameForm";
 
 function App() {
   const [videogames, setVideogames] = useState([]);
@@ -22,7 +23,6 @@ function App() {
     const [details, setDetails] = useState({visibility: false});
 
     useEffect(() => {
-      console.log(details);
     }, [details]);
 
     const filterGames = () =>{
@@ -40,7 +40,7 @@ function App() {
     useEffect(() => {
       filterGames();
       
-    }, [checkedCategories, checkedPlatforms,videogames]);
+    }, [checkedCategories, checkedPlatforms, videogames]);
 
     useEffect(() => {
       if (categories) {
@@ -119,6 +119,7 @@ function App() {
       <Header title="Videogame List"/>
       <CategoriesMenu categories={categories} checkedCategories={checkedCategories} setCheckedCategories={setCheckedCategories}/>
       <PlatformsMenu platforms={platforms} checkedPlatforms={checkedPlatforms} setCheckedPlatforms={setCheckedPlatforms}/>
+      <NewGameForm getVideoGames={getVideoGames} categories={categories} platforms={platforms}/>
       <SearchBar searchText={searchText} setSearchText={setSearchText} filterGames={filterGames}/>
       <VideoGameList getVideoGames={getVideoGames} details={details} setDetails={setDetails} categories={categories} platforms={platforms} filteredVideogames={filteredVideogames}/>
       <Modal details={details} setDetails={setDetails} categories={categories} platforms={platforms}/>
