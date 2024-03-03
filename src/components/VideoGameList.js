@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import VideoGame from "./VideoGame";
 import './componentsCSS/videogamelist.css';
+import { GameContext } from "./context/GameProvider";
 
-const VideoGameList = ({categories, platforms, filteredVideogames, details, setDetails, getVideoGames}) => {
+const VideoGameList = () => {
+    const {categories, platforms, filteredVideogames, details, setDetails, getVideoGames} = useContext(GameContext);
+
     return (
         <div className="videogamelist__div">
             {

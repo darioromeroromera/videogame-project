@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './componentsCSS/searchBar.css';
+import { GameContext } from './context/GameProvider';
 
-const SearchBar = ({searchText, setSearchText, filterGames}) => {
+const SearchBar = () => {
+    const {searchText, setSearchText, filterGames} = useContext(GameContext);
+
     return (
         <div className='searchBar__div'>
             <h1 className="searchBar__h1">Búsquedas</h1>

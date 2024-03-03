@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './componentsCSS/platformsMenu.css';
+import { GameContext } from './context/GameProvider';
 
-const PlatformsMenu = ({platforms, checkedPlatforms, setCheckedPlatforms}) => {
+const PlatformsMenu = () => {
+
+    const {platforms, checkedPlatforms, setCheckedPlatforms} = useContext(GameContext);
 
     const findPlatformCheckedState = id => {
         const foundPlat = checkedPlatforms.find(platform => platform.id == id);

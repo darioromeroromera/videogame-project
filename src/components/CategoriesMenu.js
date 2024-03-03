@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './componentsCSS/categoriesMenu.css';
+import { GameContext } from './context/GameProvider';
 
-const CategoriesMenu = ({categories, checkedCategories, setCheckedCategories}) => {
+const CategoriesMenu = () => {
+
+    const {categories, checkedCategories, setCheckedCategories} = useContext(GameContext);
 
     const findCategoryCheckedState = id => {
         const foundCat = checkedCategories.find(cat => cat.id == id);

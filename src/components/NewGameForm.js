@@ -1,8 +1,11 @@
 import './componentsCSS/newGameForm.css';
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { GameContext } from './context/GameProvider';
 
-const NewGameForm = ({getVideoGames, categories, platforms}) => {
+const NewGameForm = () => {
+
+    const {getVideoGames, categories, platforms} = useContext(GameContext);
 
     const [errors, setErrors] = useState({hasErrors: false, errors: []});
 

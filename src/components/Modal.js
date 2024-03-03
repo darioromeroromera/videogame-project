@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import './componentsCSS/modal.css'
+import { GameContext } from './context/GameProvider';
 
-const Modal = ({details, setDetails, categories, platforms}) => {
+const Modal = () => {
+
+    const {details, setDetails, categories, platforms} = useContext(GameContext);
     
     const showPlatforms = () => {
         if (details.platforms) {
