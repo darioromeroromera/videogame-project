@@ -1,7 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './componentsCSS/videogame.css';
+import { GameContext } from './context/GameProvider';
+import { useNavigate } from 'react-router-dom';
 
-const VideoGame = ({videogame, categories, platforms, details, setDetails, getVideoGames}) => {
+const VideoGame = ({videogame}) => {
+
+    const {categories, platforms, details, setDetails, getVideoGames} = useContext(GameContext);
+
+    const navigate = useNavigate();
 
     const showDescription = () => {
         if (videogame.description.length <= 100) {
@@ -42,7 +48,7 @@ const VideoGame = ({videogame, categories, platforms, details, setDetails, getVi
 
     return (
         <div className="videogame__div" onClick={(e) => {
-            if (e.target.className !== 'videogame__btn')
+            if (e.target.className !== 'videogame__btn_danger' && e.target.className !== 'videogame__btn_primary')
                 if (!details.visibility)
                     setDetails({visibility: true, name: videogame.name, categories: videogame.categories,
                         platforms: videogame.platforms, price: videogame.price, description: videogame.description, 
@@ -59,7 +65,10 @@ const VideoGame = ({videogame, categories, platforms, details, setDetails, getVi
             <h2 className='videogame__h2'>Descripción</h2>
             <p className='videogame__element'>{showDescription()}</p>
 
-            <button className='videogame__btn' onClick={deleteGame}>Borrar</button>
+            <button className='videogame__btn_danger' onClick={deleteGame}>Borrar</button>
+
+            <button className='videogame__btn_primary' onClick={() => navigate(`/game/${videogame.id}`)}>Ver detalles en otra página</button>
+
         </div>
     )
 };

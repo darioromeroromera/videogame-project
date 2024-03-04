@@ -1,0 +1,27 @@
+.navigationmenu__nav {
+    margin: 0px 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navigationmenu__div {
+    background-color: #94918E;
+    padding: 20px 0px;
+}
+
+.navigationmenu__link {
+    border-radius: 20px;
+    background-color: #28231D;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.navigationmenu__link:hover {
+    border-radius: 20px;
+    background-color: #28433D;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}

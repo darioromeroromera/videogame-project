@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "email": "dario@gmail.com",
+      "password": "$2a$10$Z5I0CEEU99ME1iboUEuFCu11kLz27ytVUzzLxQLwQUVkI/F1/10Ni",
+      "username": "dario",
+      "id": 1
+    }
+  ],
   "categories": [
     {
       "id": 1,

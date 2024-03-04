@@ -38,11 +38,23 @@
     font-size: 2.3em;
 }
 
-.videogame__btn {
+.videogame__btn_danger {
     padding: 1%;
     border-radius: 10px;
     margin-left: 10px;
     background-color: #f44336;
+    color: #FFF;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 70%;
+}
+
+.videogame__btn_primary {
+    padding: 1%;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #3B71CA;
     color: #FFF;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;

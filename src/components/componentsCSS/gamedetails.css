@@ -1,0 +1,19 @@
+.gamedetails__div {
+    margin: 20px;
+}
+
+.gamedetails__h2 {
+    font-family: 'little-boy';
+    font-size: 3em;
+}
+
+.gamedetails__p {
+    font-family: 'little-boy';
+    font-size: 2em;
+}
+
+.gamedetails__img {
+    border-radius: 20px;
+    background-color: #808080;
+    width: 20%;
+}

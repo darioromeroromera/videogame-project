@@ -4,12 +4,12 @@ import './componentsCSS/videogamelist.css';
 import { GameContext } from "./context/GameProvider";
 
 const VideoGameList = () => {
-    const {categories, platforms, filteredVideogames, details, setDetails, getVideoGames} = useContext(GameContext);
+    const {filteredVideogames} = useContext(GameContext);
 
     return (
         <div className="videogamelist__div">
             {
-                filteredVideogames.map(videogame => <VideoGame getVideoGames={getVideoGames} details={details} setDetails={setDetails} key={videogame.id} videogame={videogame} categories={categories} platforms={platforms}/>)
+                filteredVideogames.map(videogame => <VideoGame key={videogame.id} videogame={videogame}/>)
             }
         </div>
     );
